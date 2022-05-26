@@ -157,7 +157,7 @@ module qarma_core(
         end
 
 
-        CTRL_UPDATE: begin
+        CTRL_DONE: begin
           ready_new     = 1'h1;
           ready_we      = 1'h1;
           core_ctrl_new = CTRL_IDLE;

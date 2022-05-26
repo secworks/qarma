@@ -52,10 +52,11 @@ module tb_qarma_core();
   //----------------------------------------------------------------
   // Register and Wire declarations.
   //----------------------------------------------------------------
-  reg [31 : 0] cycle_ctr;
-  reg [31 : 0] error_ctr;
-  reg [31 : 0] tc_ctr;
-  reg          tb_monitor;
+  reg [63 : 0]   cycle_ctr;
+  reg [31 : 0]   error_ctr;
+  reg [31 : 0]   tc_ctr;
+  reg            display_cycle_ctr;
+  reg            display_dut_state;
 
   reg            tb_clk;
   reg            tb_reset_n;
@@ -225,13 +226,11 @@ module tb_qarma_core();
 
       tb_clk            = 0;
       tb_reset_n        = 1;
-
-      tb_set_master     = 1'h0;
-      tb_gen_key        = 1'h0;
-
-      tb_master_key     = 256'h0;
-      tb_base_addr      = 64'h0;
-      tb_ctx            = 64'h0;
+      tb_encdec         = 1'h0;
+      tb_next           = 1'h0;
+      tb_key            = 256'h0;
+      tb_tweak          = 128'h0;
+      tb_block          = 128'h0;
     end
   endtask // init_sim
 
