@@ -60,6 +60,20 @@ module qarma_core(
   localparam CTRL_IDLE = 3'h0;
   localparam CTRL_DONE = 3'h1;
 
+  localparam alpha = 128'h243f6a8885a308d3_13198a2e03707344;
+
+  localparam c0    = 128'h0000000000000000_0000000000000000;
+  localparam c1    = 128'ha4093822299f31d0_082efa98ec4e6c89;
+  localparam c2    = 128'h452821e638d01377_be5466cf34e90c6c;
+  localparam c3    = 128'hc0ac29b7c97c50dd_3f84d5b5b5470917;
+  localparam c4    = 128'h9216d5d98979fb1b_d1310ba698dfb5ac;
+  localparam c5    = 128'h2ffd72dbd01adfb7_b8e1afed6a267e96;
+  localparam c6    = 128'hba7c9045f12c7f99_24a19947b3916cf7;
+  localparam c7    = 128'h0801f2e2858efc16_636920d871574e69;
+  localparam c8    = 128'ha458fea3f4933d7e_0d95748f728eb658;
+  localparam c9    = 128'h718bcd5882154aee_7b54a41dc25a59b5;
+  localparam c10   = 128'h9c30d5392af26013_c5d1b023286085f0;
+
 
   //----------------------------------------------------------------
   // Registers including update variables and write enable.
